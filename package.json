@@ -1,0 +1,27 @@
+{
+  "name": "tinvio-frontend-case",
+  "version": "1.0.0",
+  "description": "A frontend single page app with mock reference to showcase user details and posts",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomashiwa/tinvio-frontend-case.git"
+  },
+  "author": "Wong Qin Liang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tomashiwa/tinvio-frontend-case/issues"
+  },
+  "homepage": "https://github.com/Tomashiwa/tinvio-frontend-case#readme",
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
