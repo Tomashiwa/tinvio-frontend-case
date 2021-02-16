@@ -12,6 +12,13 @@
     box-shadow: 0px 0px 3px 1px rgb(240, 240, 240);
 }
 
+.posts > .card .card {
+    margin-bottom: 3%;
+
+    border-radius: 5px;
+    border: 1px solid rgb(240, 240, 240);
+}
+
 .post-preview .card-subtitle {
     overflow: hidden;
     text-overflow: ellipsis;
