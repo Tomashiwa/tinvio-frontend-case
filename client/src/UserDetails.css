@@ -1,3 +1,9 @@
+.details {
+    width: 30%;
+    margin-left: 18%;
+    /* padding-left: 15%; */
+}
+
 .details-row {
     display: flex;
     flex-direction: row;
