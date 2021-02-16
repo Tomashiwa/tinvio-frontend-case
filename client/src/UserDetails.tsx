@@ -14,7 +14,9 @@ export default function UserDetails(props : Props) {
     return (
         <div className="details">
             <Card>
-                <CardImg top height="auto" width="100%" src="image.jpg" alt="banner" />
+                <div className="details-banner" />
+                    {/* <CardImg top width="100%" src="image.jpg" alt="banner" /> */}
+                {/* </div> */}
                 <CardBody>
                     <CardTitle tag="h2">{props.name}</CardTitle>
                     <div className="details-row">
