@@ -21,7 +21,7 @@ export default function UserPosts(props : Props) {
                 <CardSubtitle>{`${props.posts.length} POSTS`}</CardSubtitle>
                 <div className="post-preview">
                     {
-                        props.posts.slice(0,3).map(post => {
+                        props.posts.map(post => {
                             return <Card key={post.id}>
                                 <CardTitle tag="h4">{post.title}</CardTitle>
                                 <CardSubtitle>{post.body}</CardSubtitle>

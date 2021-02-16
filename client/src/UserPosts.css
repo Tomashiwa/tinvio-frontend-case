@@ -19,7 +19,20 @@
     border: 1px solid rgb(240, 240, 240);
 }
 
-.post-preview .card-subtitle {
+.post-preview {
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    height: 30vh;
+}
+
+.post-preview::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.post-preview .card-subtitle, .post-preview .card-title {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
