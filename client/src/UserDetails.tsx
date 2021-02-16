@@ -1,6 +1,9 @@
 import React from 'react'
 import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap'
 
+import phoneIcon from './assets/phone.svg'
+import keywordIcon from './assets/category.png'
+import addressIcon from './assets/icon-24-shop.svg'
 import './UserDetails.css'
 
 type Props = {
@@ -15,20 +18,18 @@ export default function UserDetails(props : Props) {
         <div className="details">
             <Card>
                 <div className="details-banner" />
-                    {/* <CardImg top width="100%" src="image.jpg" alt="banner" /> */}
-                {/* </div> */}
                 <CardBody>
                     <CardTitle tag="h2">{props.name}</CardTitle>
                     <div className="details-row">
-                        <img src="phone.svg" alt="phone"/>
+                        <img src={phoneIcon} alt="phone"/>
                         <CardText>{props.phone}</CardText>
                     </div>
                     <div className="details-row">
-                        <img src="category.png" alt="keywords"/>
+                        <img src={keywordIcon} alt="keywords"/>
                         <CardText>{props.keywords.join(" • ")}</CardText>
                     </div>
                     <div className="details-row">
-                        <img src="icon-24-shop.svg" alt="address"/>
+                        <img src={addressIcon} alt="address"/>
                         <CardText>{props.address}</CardText>
                     </div>
                 </CardBody>
