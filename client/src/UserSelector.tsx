@@ -6,6 +6,8 @@ import Select from 'react-select'
 import { UserContext, UserState } from './UserContext';
 import { Option } from './Types'
 
+import './UserSelector.css'
+
 const URL_USER_DETAILS = "https://jsonplaceholder.typicode.com/users/";
 
 type UserDetails = {
@@ -56,6 +58,7 @@ export default function UserSelector() {
                 setUsers(newUsers);
                 setOptions(newOptions);
                 setHasLoaded(true);
+                setUserState(newUsers[0]);
             })
     }, [])
 
@@ -66,16 +69,20 @@ export default function UserSelector() {
     }
 
     return (
-        <>
-            <Select 
-                options={options}
-                onChange={selectUser}
-                defaultValue={options[0]}
-                isLoading={!hasLoaded}
-                isClearable={false}
-                isRtl={false}
-                isSearchable={false}
-            />
-        </>
+        <div className="user-selector">
+            {
+                options.length == 0
+                    ? <></>
+                    : <Select 
+                        options={options}
+                        onChange={selectUser}
+                        defaultValue={options[0]}
+                        isLoading={!hasLoaded}
+                        isClearable={false}
+                        isRtl={false}
+                        isSearchable={false}
+                    />
+            }
+        </div>
     )
 }
