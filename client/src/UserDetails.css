@@ -10,6 +10,10 @@
     box-shadow: 0px 0px 3px 1px rgb(240, 240, 240);
 }
 
+.details .card-body {
+    padding: 5%;
+}
+
 .details-banner {
     background-image: url("../src/assets/image.jpg");
     background-size: cover;
