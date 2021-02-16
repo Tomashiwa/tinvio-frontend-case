@@ -19,7 +19,16 @@ export default function UserPosts(props : Props) {
     useEffect(() => {
         axios.get(`${URL_USER_POSTS}${props.id}`)
             .then(results => {
-                setPosts(results.data);
+                let newPosts = results.data.map((post: Post) => {
+                    return {
+                        ...post,
+                        title: post.title.charAt(0).toUpperCase() + post.title.substr(1)
+                    }
+                })
+
+                console.log(newPosts)
+
+                setPosts(newPosts);
             })
     }, [props.id])
 
@@ -32,7 +41,7 @@ export default function UserPosts(props : Props) {
                     {
                         posts.map(post => {
                             return <Card key={post.id}>
-                                <CardTitle tag="h4">{post.title}</CardTitle>
+                                <CardTitle tag="div" className="post-title">{post.title}</CardTitle>
                                 <CardSubtitle>{post.body}</CardSubtitle>
                             </Card>
                         })
