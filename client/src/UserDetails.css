@@ -1,10 +1,17 @@
 .details {
     width: 30%;
+    height: 30%;
     margin-left: 18%;
-    /* padding-left: 15%; */
 }
 
 .details-row {
     display: flex;
     flex-direction: row;
+    align-items: center;
+}
+
+.details-row img {
+    width: 5%;
+    height: 5%;
+    margin-right: 2%;
 }
