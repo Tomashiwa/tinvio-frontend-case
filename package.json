@@ -25,6 +25,7 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
+    "@types/react-select": "^4.0.13",
     "nodemon": "^2.0.7"
   }
 }

@@ -4,6 +4,8 @@ import { Post } from './Types'
 
 import './UserPosts.css'
 
+const URL_USER_POSTS = "https://jsonplaceholder.typicode.com/posts?userId=";
+
 type Props = {
     name: String,
     posts: Post[]
