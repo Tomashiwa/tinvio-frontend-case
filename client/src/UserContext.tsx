@@ -1,5 +1,4 @@
 import { Context, createContext } from "react"
-import { Post } from "./Types";
 
 export type UserState = {
     id: number,
