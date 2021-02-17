@@ -1,19 +1,24 @@
 .details {
-    width: 30%;
-    /* height: 30%; */
-    /* max-width: 30%;
-    max-height: 30%; */
-    margin-left: 18%;
+    /* width: 30%; */
+    width: 40%;
+    height: 100%;
+    /* margin-left: 18%; */
 }
 
 .details > .card {
+    width: 100%;
+    height: 100%;
+
     border-radius: 5px;
     border: 1px solid rgb(240, 240, 240);
     box-shadow: 0px 0px 3px 1px rgb(240, 240, 240);
 }
 
 .details .card-body {
+    height: 70%;
     padding: 5%;
+
+    overflow-y:hidden;
 }
 
 .details-banner {
