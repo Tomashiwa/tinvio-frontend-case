@@ -7,6 +7,7 @@ import { UserContext, UserState } from './UserContext';
 import { Option } from './Types'
 
 import './UserSelector.css'
+import { Spinner } from 'reactstrap';
 
 const URL_USER_DETAILS = "https://jsonplaceholder.typicode.com/users/";
 
@@ -72,7 +73,9 @@ export default function UserSelector() {
         <div className="user-selector">
             {
                 options.length == 0
-                    ? <></>
+                    ? <div className="spinner-area">
+                        <Spinner color="secondary"/>
+                    </div>
                     : <Select 
                         options={options}
                         onChange={selectUser}

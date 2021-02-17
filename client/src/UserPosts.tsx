@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect } from 'react'
 import { useState } from 'react';
-import { Card, CardBody, CardSubtitle, CardTitle } from 'reactstrap';
+import { Card, CardBody, CardSubtitle, CardTitle, Spinner } from 'reactstrap';
 import { Post } from './Types'
 
 import './UserPosts.css'
@@ -15,8 +15,11 @@ type Props = {
 
 export default function UserPosts(props : Props) {
     const [posts, setPosts] = useState<Post[]>([]);
+    const [isLoading, setIsLoading] = useState<Boolean>(false);
 
     useEffect(() => {
+        setIsLoading(true);
+
         axios.get(`${URL_USER_POSTS}${props.id}`)
             .then(results => {
                 let newPosts = results.data.map((post: Post) => {
@@ -27,6 +30,7 @@ export default function UserPosts(props : Props) {
                 })
                 
                 setPosts(newPosts);
+                setIsLoading(false);
             })
     }, [props.id])
 
@@ -36,16 +40,23 @@ export default function UserPosts(props : Props) {
                 <CardBody>
                     <CardTitle tag="h2">{`${props.name.split(" ")[0]}'s Posts`}</CardTitle>
                     <CardSubtitle>{`${posts.length} POSTS`}</CardSubtitle>
-                    <div className="post-preview">
-                        {
-                            posts.map(post => {
-                                return <Card key={post.id} className="posts-entry-card">
-                                    <CardTitle tag="div" className="post-title">{post.title}</CardTitle>
-                                    <CardSubtitle>{post.body}</CardSubtitle>
-                                </Card>
-                            })
-                        }
-                    </div>
+                    {
+                        isLoading
+                            ? <div className="spinner-area">
+                                <Spinner color="secondary"/>
+                            </div>
+                            : <div className="post-preview">
+                                {
+                                    posts.map(post => {
+                                        return <Card key={post.id} className="posts-entry-card">
+                                            <CardTitle tag="div" className="post-title">{post.title}</CardTitle>
+                                            <CardSubtitle>{post.body}</CardSubtitle>
+                                        </Card>
+                                    })
+                                }
+                            </div>
+
+                    }
                 </CardBody>
             </Card>
         </div>
