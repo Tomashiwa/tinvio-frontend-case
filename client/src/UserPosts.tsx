@@ -4,7 +4,7 @@ import { Post } from './Types'
 import axios from 'axios';
 import { Card, CardBody, CardSubtitle, CardTitle, Spinner } from 'reactstrap';
 
-import './UserPosts.css'
+import './css/UserPosts.css'
 
 const URL_USER_POSTS = "https://jsonplaceholder.typicode.com/posts?userId=";
 

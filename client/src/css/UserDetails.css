@@ -37,7 +37,7 @@
     height: 0;
     padding-top: 30%;
 
-    background-image: url("../src/assets/image.jpg");
+    background-image: url("../assets/image.jpg");
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;

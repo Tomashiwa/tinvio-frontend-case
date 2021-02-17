@@ -3,7 +3,7 @@ import { Card, CardBody, CardText, CardTitle } from 'reactstrap'
 import phoneIcon from './assets/phone.svg'
 import keywordIcon from './assets/category.png'
 import addressIcon from './assets/icon-24-shop.svg'
-import './UserDetails.css'
+import './css/UserDetails.css'
 
 type Props = {
     name: string,

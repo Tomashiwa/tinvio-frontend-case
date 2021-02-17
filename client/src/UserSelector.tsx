@@ -6,7 +6,7 @@ import axios from 'axios';
 import Select from 'react-select'
 import { Spinner } from 'reactstrap';
 
-import './UserSelector.css'
+import './css/UserSelector.css'
 
 const URL_USER_DETAILS = "https://jsonplaceholder.typicode.com/users/";
 

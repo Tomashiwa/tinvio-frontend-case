@@ -6,7 +6,7 @@ import UserPosts from './UserPosts';
 import UserSelector from './UserSelector';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
+import './css/App.css';
 
 function App() {
 	const [userState, setUserState] = useState<UserState>(USERSTATE_BLANK);
