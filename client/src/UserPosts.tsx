@@ -17,6 +17,11 @@ export default function UserPosts(props : Props) {
     const [posts, setPosts] = useState<Post[]>([]);
     const [isLoading, setIsLoading] = useState<Boolean>(false);
 
+    const resetPreviewScroll = () => {
+        let previewElement : HTMLCollectionOf<Element> = document.getElementsByClassName("post-preview");
+        previewElement.item(0)!.scrollTop = 0;
+    }
+
     useEffect(() => {
         setIsLoading(true);
 
@@ -31,9 +36,7 @@ export default function UserPosts(props : Props) {
 
                 setIsLoading(false);
                 setPosts(newPosts);
-                
-                let previewElement : HTMLCollectionOf<Element> = document.getElementsByClassName("post-preview");
-                previewElement.item(0)!.scrollTop = 0;
+                resetPreviewScroll();
             })
     }, [props.id])
 

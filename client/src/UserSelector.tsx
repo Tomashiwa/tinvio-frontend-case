@@ -36,15 +36,19 @@ export default function UserSelector() {
         axios.get(`${URL_USER_DETAILS}`)
             .then(usersRes => {
                 let newUsers : UserState[] = usersRes.data.map((user : UserDetails) => {
+                    let address = `${user.address.street}, 
+                        ${user.address.suite}, ${user.address.city} 
+                        ${user.address.zipcode.split("-")[0]}`
+                    let keywords = user.company.bs.split(" ").map((keyword : string) => {
+                        keyword = keyword.charAt(0).toUpperCase() + keyword.substr(1);
+                        return keyword;
+                    }) 
                     return {
                         id: user.id,
                         name: user.name,
                         phone: user.phone.split(" ")[0],
-                        address: `${user.address.street}, ${user.address.suite}, ${user.address.city} ${user.address.zipcode.split("-")[0]}`,
-                        keywords: user.company.bs.split(" ").map((keyword : string) => {
-                            	keyword = keyword.charAt(0).toUpperCase() + keyword.substr(1);
-                            	return keyword;
-                            })
+                        address,
+                        keywords
                     }
                 });
 
