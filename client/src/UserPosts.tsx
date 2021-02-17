@@ -28,9 +28,12 @@ export default function UserPosts(props : Props) {
                         title: post.title.charAt(0).toUpperCase() + post.title.substr(1)
                     }
                 })
-                
-                setPosts(newPosts);
+
                 setIsLoading(false);
+                setPosts(newPosts);
+                
+                let previewElement : HTMLCollectionOf<Element> = document.getElementsByClassName("post-preview");
+                previewElement.item(0)!.scrollTop = 0;
             })
     }, [props.id])
 
