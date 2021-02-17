@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import './App.css';
 import { UserContext, UserState, USERSTATE_BLANK } from './UserContext';
 import UserDetails from './UserDetails';
 import UserPosts from './UserPosts';
 import UserSelector from './UserSelector';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
 	const [userState, setUserState] = useState<UserState>(USERSTATE_BLANK);
