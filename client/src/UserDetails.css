@@ -14,22 +14,22 @@
     box-shadow: 0px 0px 3px 1px rgb(240, 240, 240);
 }
 
-.details .card-body::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-}
-
 .details .card-body {
     height: 100%;
     padding: 5%;
-
+    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
+    
     overflow-y: scroll;
     scrollbar-width: none;
     -ms-overflow-style: none;
+}
+
+.details .card-body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .details-banner {
@@ -100,4 +100,5 @@ and (orientation:portrait) {
 and (device-width: 1024px) 
 and (device-height: 768px) 
 and (orientation:landscape) {
+    
 }

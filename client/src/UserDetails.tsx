@@ -1,5 +1,4 @@
-import React from 'react'
-import { Card, CardBody, CardImg, CardText, CardTitle } from 'reactstrap'
+import { Card, CardBody, CardText, CardTitle } from 'reactstrap'
 
 import phoneIcon from './assets/phone.svg'
 import keywordIcon from './assets/category.png'

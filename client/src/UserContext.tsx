@@ -25,5 +25,3 @@ export let UserContext : Context<UserInfo> = createContext<UserInfo>({
     userState: {...USERSTATE_BLANK}, 
     setUserState: () => {}
 });
-
-// export * from "../context/UserContext";

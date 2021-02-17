@@ -1,13 +1,12 @@
-import axios from 'axios';
-import { useContext } from 'react';
-import { useEffect } from 'react';
-import { useState } from 'react'
-import Select from 'react-select'
+import { useState, useContext, useEffect } from 'react';
 import { UserContext, UserState } from './UserContext';
 import { Option } from './Types'
 
-import './UserSelector.css'
+import axios from 'axios';
+import Select from 'react-select'
 import { Spinner } from 'reactstrap';
+
+import './UserSelector.css'
 
 const URL_USER_DETAILS = "https://jsonplaceholder.typicode.com/users/";
 

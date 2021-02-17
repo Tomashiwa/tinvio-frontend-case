@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { UserContext, UserState, USERSTATE_BLANK } from './UserContext';
+
 import UserDetails from './UserDetails';
 import UserPosts from './UserPosts';
 import UserSelector from './UserSelector';
@@ -19,7 +20,12 @@ function App() {
 						userState.id == -1
 							? <></>
 							: <>
-								<UserDetails name={userState.name} phone={userState.phone} keywords={userState.keywords} address={userState.address}/>
+								<UserDetails 
+									name={userState.name} 
+									phone={userState.phone} 
+									keywords={userState.keywords} 
+									address={userState.address}
+								/>
 								<UserPosts id={userState.id} name={userState.name}/>
 							</>
 					}

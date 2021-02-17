@@ -1,8 +1,8 @@
-import axios from 'axios';
-import React, { useEffect } from 'react'
-import { useState } from 'react';
-import { Card, CardBody, CardSubtitle, CardTitle, Spinner } from 'reactstrap';
+import { useState, useEffect } from 'react'
 import { Post } from './Types'
+
+import axios from 'axios';
+import { Card, CardBody, CardSubtitle, CardTitle, Spinner } from 'reactstrap';
 
 import './UserPosts.css'
 
@@ -58,7 +58,6 @@ export default function UserPosts(props : Props) {
                                     })
                                 }
                             </div>
-
                     }
                 </CardBody>
             </Card>
