@@ -25,9 +25,7 @@ export default function UserPosts(props : Props) {
                         title: post.title.charAt(0).toUpperCase() + post.title.substr(1)
                     }
                 })
-
-                console.log(newPosts)
-
+                
                 setPosts(newPosts);
             })
     }, [props.id])

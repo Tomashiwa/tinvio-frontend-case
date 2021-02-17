@@ -13,6 +13,7 @@ function App() {
   	return (
 		<div className="App">
 			<UserContext.Provider value={{userState, setUserState}}>
+				<UserSelector />
 				<div className="user-container">
 					{
 						userState.id == -1
@@ -23,7 +24,6 @@ function App() {
 							</>
 					}
 				</div>
-				<UserSelector />
 			</UserContext.Provider>
 		</div>
   	);
