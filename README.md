@@ -2,7 +2,7 @@
 
 Access the live version [here](https://tinvio-frontend-case.herokuapp.com/) on Heroku
 
-(Please note that the load time maybe quite long if the Heroku's dyno is sleeping)
+(Please note that the load time maybe quite long due to Heroku's free-tier limitation)
 
 ## How to run after cloning?
 1. Open any terminal you are comfortable with, change your current directory to the root of the cloned repo (eg. C:\repos\tinvio-frontend-case\)
