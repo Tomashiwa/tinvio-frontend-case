@@ -22,6 +22,7 @@ export default function UserPosts(props : Props) {
         previewElement.item(0)!.scrollTop = 0;
     }
 
+    // Retreive the currently selected user's posts
     useEffect(() => {
         setIsLoading(true);
 
@@ -46,8 +47,9 @@ export default function UserPosts(props : Props) {
                 <CardBody>
                     <CardTitle tag="h4">{`${props.name.split(" ")[0]}'s Posts`}</CardTitle>
                     {
+                        // Display a list of user's posts when it has been retrieved. Else, a spinning loader will be present
                         isLoading
-                        ? <div className="spinner-area">
+                            ? <div className="spinner-area">
                                 <Spinner color="secondary"/>
                             </div>
                             : <>
@@ -62,8 +64,7 @@ export default function UserPosts(props : Props) {
                                         })
                                     }
                                 </div>
-                            </>
-                            
+                            </>   
                     }
                 </CardBody>
             </Card>

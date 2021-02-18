@@ -17,6 +17,7 @@ function App() {
 				<UserSelector />
 				<div className="user-container">
 					{
+						// Display user information only when a user id has been set
 						userState.id == -1
 							? <></>
 							: <>

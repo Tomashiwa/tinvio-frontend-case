@@ -17,8 +17,10 @@ export default function UserDetails(props : Props) {
         <div className="details">
             <Card>
                 <div className="details-banner" />
+                
                 <CardBody>
                     <CardTitle tag="h4">{props.name}</CardTitle>
+
                     <div className="details-row">
                         <img src={phoneIcon} alt="phone"/>
                         <CardText>{props.phone}</CardText>

@@ -32,6 +32,7 @@ export default function UserSelector() {
     const [users, setUsers] = useState<UserState[]>([]);
     const [options, setOptions] = useState<Option[]>([]);
 
+    // Retrieve all users from the API and load them as options in the dropdown selector
     useEffect(() => {
         axios.get(`${URL_USER_DETAILS}`)
             .then(usersRes => {
@@ -39,10 +40,13 @@ export default function UserSelector() {
                     let address = `${user.address.street}, 
                         ${user.address.suite}, ${user.address.city} 
                         ${user.address.zipcode.split("-")[0]}`
+
+                    // Seperate a string of keywords into multiple keywords
                     let keywords = user.company.bs.split(" ").map((keyword : string) => {
                         keyword = keyword.charAt(0).toUpperCase() + keyword.substr(1);
                         return keyword;
-                    }) 
+                    })
+
                     return {
                         id: user.id,
                         name: user.name,
