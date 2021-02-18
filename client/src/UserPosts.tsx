@@ -44,7 +44,7 @@ export default function UserPosts(props : Props) {
         <div className="posts">
             <Card className="posts-card">
                 <CardBody>
-                    <CardTitle tag="h2">{`${props.name.split(" ")[0]}'s Posts`}</CardTitle>
+                    <CardTitle tag="h4">{`${props.name.split(" ")[0]}'s Posts`}</CardTitle>
                     <CardSubtitle>{`${posts.length} POSTS`}</CardSubtitle>
                     {
                         isLoading
