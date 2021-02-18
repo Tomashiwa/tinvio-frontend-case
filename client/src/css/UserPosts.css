@@ -86,7 +86,11 @@
     .posts {
         width: 100%;
         height: auto;
-        /* min-height: 500px; */
         margin-bottom: 5%;
+    }
+
+    .posts .spinner-area {
+        padding-top: 25%;
+        padding-bottom: 25%;
     }
 }
