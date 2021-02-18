@@ -2,41 +2,8 @@
     width: 25%;
 }
 
-/* Mobile - landscape */
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) 
-and (orientation : landscape) { 
-    .user-selector {
-        width: 60%;
-    }
-}
-
-/* Mobile - portrait */
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
-and (orientation : portrait) { 
-    .user-selector {
-        width: 60%;
-    }
-}
-
-/* Tablet - Portrait */
-@media all 
-and (device-width: 768px) 
-and (device-height: 1024px)
-and (orientation:portrait) {
-    .user-selector {
-        width: 40%;
-    }
-}
-
-/* Tablet - Landscape */
-@media all 
-and (device-width: 1024px) 
-and (device-height: 768px) 
-and (orientation:landscape) {
+@media (max-width: 1000px), 
+(max-width: 1024px) and (min-height: 950px) {
     .user-selector {
         width: 40%;
     }
