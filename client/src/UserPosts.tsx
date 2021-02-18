@@ -45,22 +45,25 @@ export default function UserPosts(props : Props) {
             <Card className="posts-card">
                 <CardBody>
                     <CardTitle tag="h4">{`${props.name.split(" ")[0]}'s Posts`}</CardTitle>
-                    <CardSubtitle>{`${posts.length} POSTS`}</CardSubtitle>
                     {
                         isLoading
-                            ? <div className="spinner-area">
+                        ? <div className="spinner-area">
                                 <Spinner color="secondary"/>
                             </div>
-                            : <div className="post-preview">
-                                {
-                                    posts.map(post => {
-                                        return <Card key={post.id} className="posts-entry-card">
-                                            <CardTitle tag="div" className="post-title">{post.title}</CardTitle>
-                                            <CardSubtitle>{post.body}</CardSubtitle>
-                                        </Card>
-                                    })
-                                }
-                            </div>
+                            : <>
+                                <CardSubtitle>{`${posts.length} POSTS`}</CardSubtitle>
+                                <div className="post-preview">
+                                    {
+                                        posts.map(post => {
+                                            return <Card key={post.id} className="posts-entry-card">
+                                                <CardTitle tag="div" className="post-title">{post.title}</CardTitle>
+                                                <CardSubtitle>{post.body}</CardSubtitle>
+                                            </Card>
+                                        })
+                                    }
+                                </div>
+                            </>
+                            
                     }
                 </CardBody>
             </Card>

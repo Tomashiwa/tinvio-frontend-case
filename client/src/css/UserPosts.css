@@ -85,7 +85,8 @@
 (max-width: 1024px) and (min-height: 950px) {
     .posts {
         width: 100%;
-        min-height: 100%;
+        height: auto;
+        /* min-height: 500px; */
         margin-bottom: 5%;
     }
 }
